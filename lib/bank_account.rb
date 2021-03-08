@@ -1,7 +1,8 @@
 
 class Account 
+    attr_reader :transaction
   def initialize(balance = 0.00)
-    @transaction = []
+    @transaction = transaction
     @balance = balance
   end 
 

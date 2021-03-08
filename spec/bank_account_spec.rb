@@ -6,7 +6,11 @@ subject(:account) {described_class.new}
 
     describe '#initialize' do 
         it 'should create an instance' do 
-            expect(subject.bank_account).to eq([])
+            expect(subject.bank_account).to eq(@transaction)
         end 
+
+        
     end
+
+    
 end 
