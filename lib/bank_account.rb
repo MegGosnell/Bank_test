@@ -1,10 +1,10 @@
 
 class Account 
     attr_reader :transaction_history, :balance
-  
+    DEFAULT_BALANCE = 0
     def initialize
         @transaction_history = []
-        @balance = 0
+        @balance = DEFAULT_BALANCE
     end 
 
     def bank_account 
