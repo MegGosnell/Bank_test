@@ -23,6 +23,8 @@ subject(:account) {described_class.new}
             account.deposit(10) 
             expect(subject.withdraw(5))
             expect(subject.bank_account).to eq(5)
+            expect{ subject.withdraw(20) }.to raise_error "You have insufficent funds"
         end
     end
+    
 end 

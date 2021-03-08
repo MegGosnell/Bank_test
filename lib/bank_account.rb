@@ -17,6 +17,7 @@ class Account
     end 
 
     def withdraw(amount)
-        transaction_history << @balance -= amount 
+        transaction_history << @balance -= amount
+        fail "You have insufficent funds" if @balance - amount < 0 
     end
 end 
