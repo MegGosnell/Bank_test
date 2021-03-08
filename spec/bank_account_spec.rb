@@ -4,6 +4,7 @@ require 'bank_account'
 describe Account do 
 subject(:account) {described_class.new}
 let(:statement) { "Date || Credit || Debit || Balance\n8/3/2021 || 10 || || 10" }
+    context 'New Account'
     describe '#initialize' do 
         it 'should create an instance' do 
             expect(subject.bank_account).to eq(0)
