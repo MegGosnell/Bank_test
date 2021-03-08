@@ -1,7 +1,8 @@
 
 class Account 
-  def initialize 
+  def initialize(balance = 0.00)
     @transaction = []
+    @balance = balance
   end 
 
   def bank_account 
