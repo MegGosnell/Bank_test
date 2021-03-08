@@ -26,5 +26,6 @@ subject(:account) {described_class.new}
             expect{ subject.withdraw(20) }.to raise_error "You have insufficent funds"
         end
     end
+
     
 end 
