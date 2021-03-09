@@ -14,7 +14,7 @@ subject(:account) {described_class.new}
     describe '#deposit' do 
         it 'should be able to take a deposit' do 
             expect(subject).to respond_to(:deposit).with(1).argument
-            expect(subject.deposit(10)).to eq([10])
+            expect(subject.deposit(10)).to eq(10)
         end 
     end
 
