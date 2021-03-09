@@ -31,7 +31,5 @@ class Account
         printed_statement = @transaction_history.reverse.join("\n") 
         puts printed_statement
         return printed_statement 
-        
-        
     end
 end 
