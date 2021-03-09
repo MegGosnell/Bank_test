@@ -1,6 +1,7 @@
 class Account 
     attr_reader :transaction_history, :balance, :time
     DEFAULT_BALANCE = 0
+    HEADER = "Date || Credit || Debit || Balance"
     def initialize
         @transaction_history = []
         @balance = DEFAULT_BALANCE
@@ -26,10 +27,12 @@ class Account
         @balance
     end
 
+
+
     def bank_statement
-        header = "Date || Credit || Debit || Balance " 
-        header + @transaction_history.reverse.join(" ") do |value| 
-        print value "\n"
+        @transaction_history << HEADER
+        @transaction_history.reverse.join("\n") do |value| 
+        print value 
        end
     end
 
