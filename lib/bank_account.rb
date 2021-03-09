@@ -13,7 +13,7 @@ class Account
 
     def deposit(amount)
        @balance += amount 
-       puts "You made a deposit of #{'%.2f' % amount} at #{@time.strftime("%d/%m/%Y")}" 
+        # puts "You made a deposit of #{'%.2f' % amount} at #{@time.strftime("%d/%m/%Y")}" 
        @transaction_history.push("#{@time.strftime("%d/%m/%Y")}  || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
        @balance 
     end 
@@ -21,7 +21,7 @@ class Account
     def withdraw(amount)
         @balance -= amount
         fail "You have insufficent funds" if @balance - amount < 0
-        puts "You made a withdrawal of #{'%.2f' % amount} at #{@time.strftime("%d/%m/%Y")}"
+        # puts "You made a withdrawal of #{'%.2f' % amount} at #{@time.strftime("%d/%m/%Y")}"
         @transaction_history.push("#{@time.strftime("%d/%m/%Y")} || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
         @balance
     end
