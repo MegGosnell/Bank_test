@@ -27,9 +27,9 @@ class Account
     end
 
     def bank_statement
-        header = "Date || Credit || Debit || Balance\n"
+        header = "Date || Credit || Debit || Balance " 
         header + @transaction_history.reverse.join(" ") do |value| 
-        print value
+        print value "\n"
        end
     end
 

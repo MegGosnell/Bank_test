@@ -2,7 +2,7 @@ require 'bank_account'
 
 describe Account do 
 subject(:account) {described_class.new}
-let(:header) { "Date || Credit || Debit || Balance\n" }
+let(:header) { "Date || Credit || Debit || Balance"  }
     context 'New Account'
     describe '#initialize' do 
         it 'should create an instance' do 
@@ -30,7 +30,7 @@ let(:header) { "Date || Credit || Debit || Balance\n" }
             subject.deposit(1000)
             subject.deposit(2000)
             subject.withdraw(500)
-            expect(subject.bank_statement).to eq(header + "#{subject.time.strftime('%d/%m/%Y')} || 500.00 || || 2500.00 #{subject.time.strftime('%d/%m/%Y')}  || 2000.00 || || 3000.00 #{subject.time.strftime('%d/%m/%Y')}  || 1000.00 || || 1000.00")
+            expect(subject.bank_statement).to eq(header + " #{subject.time.strftime('%d/%m/%Y')} || 500.00 || || 2500.00 #{subject.time.strftime('%d/%m/%Y')}  || 2000.00 || || 3000.00 #{subject.time.strftime('%d/%m/%Y')}  || 1000.00 || || 1000.00")
         end
     end 
 end 
