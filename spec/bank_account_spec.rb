@@ -30,10 +30,9 @@ subject(:account) {described_class.new}
 
     describe '#bank_statement' do 
         it 'should print a bank statement' do 
-            expect(subject.bank_statement).to eq "date || credit || debit || balance
-            14/01/2012 || || 500.00 || 2500.00
-            13/01/2012 || 2000.00 || || 3000.00
-            10/01/2012 || 1000.00 || || 1000.00"
+            subject.deposit(1000)
+            expect(subject.bank_statement).to eq "#{subject.time.strftime('%d/%m/%Y')} || 1000.00 || || 1000.00"
+            
         end
     end 
 end 
