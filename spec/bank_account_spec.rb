@@ -3,7 +3,7 @@ require 'bank_account'
 
 describe Account do 
 subject(:account) {described_class.new}
-let(:statement) { "Date || Credit || Debit || Balance\n8/3/2021 || 10 || || 10" }
+
     context 'New Account'
     describe '#initialize' do 
         it 'should create an instance' do 
@@ -27,10 +27,4 @@ let(:statement) { "Date || Credit || Debit || Balance\n8/3/2021 || 10 || || 10" 
             expect{ subject.withdraw(20) }.to raise_error "You have insufficent funds"
         end
     end
-    describe '#bank_statment' do 
-        it 'should print the bank statement' do
-            expect(subject.statement).to eq(statement)
-        end 
-    end
-
 end 

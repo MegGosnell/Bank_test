@@ -23,8 +23,6 @@ class Account
         @balance
     end
 
-    def statement 
-        "Date || Credit || Debit || Balance\n8/3/2021 || 10 || || 10"
-    end 
+   
 
 end 
