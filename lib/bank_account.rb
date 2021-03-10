@@ -1,35 +1,39 @@
-class Account 
-    attr_reader :transaction_history, :balance, :time
-    DEFAULT_BALANCE = 0
-    HEADER = "Date || Credit || Debit || Balance"
-    def initialize
-        @transaction_history = []
-        @balance = DEFAULT_BALANCE
-        @time = Time.new
-    end 
+# frozen_string_literal: true
 
-    def bank_account 
-        @balance
-    end 
+class Account
+  attr_reader :transaction_history, :balance, :time
 
-    def deposit(amount)
-       @balance += amount 
-       @transaction_history.push("#{@time.strftime("%d/%m/%Y")}  || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
-       @balance 
-    end 
+  DEFAULT_BALANCE = 0
+  HEADER = 'Date || Credit || Debit || Balance'
+  def initialize
+    @transaction_history = []
+    @balance = DEFAULT_BALANCE
+    @time = Time.new
+  end
 
-    def withdraw(amount)
-        @balance -= amount
-        fail "You have insufficent funds" if @balance - amount < 0
-        @transaction_history.push("#{@time.strftime("%d/%m/%Y")} || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
-        @balance
-    end
+  def bank_account
+    @balance
+  end
 
-    
-    def bank_statement
-        @transaction_history << HEADER
-        printed_statement = @transaction_history.reverse.join("\n") 
-        puts printed_statement
-        return printed_statement 
-    end
-end 
+  def deposit(amount)
+    @balance += amount
+    @transaction_history.push("#{@time.strftime('%d/%m/%Y')}  || #{'%.2f' % amount} || || #{format('%.2f',
+                                                                                                   @balance)}")
+    @balance
+  end
+
+  def withdraw(amount)
+    @balance -= amount
+    raise 'You have insufficent funds' if (@balance - amount).negative?
+
+    @transaction_history.push("#{@time.strftime('%d/%m/%Y')} || #{'%.2f' % amount} || || #{format('%.2f', @balance)}")
+    @balance
+  end
+
+  def bank_statement
+    @transaction_history << HEADER
+    printed_statement = @transaction_history.reverse.join("\n")
+    puts printed_statement
+    printed_statement
+  end
+end
