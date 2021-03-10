@@ -30,7 +30,7 @@ As someone who frequently deposits and withdraws
 So that i can keep track of my finances
 I would like to see my transactions on a bank statment
 ```
-## Specification
+
 
 ## Requirements
 
