@@ -8,10 +8,20 @@ A practice test delivered at Makers Academy, focused on the production of best p
 - Run on IRB as follows:
 ```
 -r "./lib/bank_account.rb'
+```
+```
 account = Account.new 
+```
+```
 account.deposit(1000)
+```
+```
 account.deposit(2000)
+```
+```
 account.withdraw(500)
+```
+```
 account.bank_statement
 ```
 
@@ -46,14 +56,12 @@ So that i can keep track of my finances
 I would like to see my transactions on a bank statment
 ```
 
-
 ## Requirements
 
 You should be able to interact with your code via IRB.
 Deposits, withdrawal.
 Account statement (date, amount, balance) printing.
 Data can be kept in memory (no database).
-
 
 ## Acceptance Criteria 
 
@@ -69,6 +77,9 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+
+
 
 
 
