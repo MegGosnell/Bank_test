@@ -7,7 +7,7 @@ A practice test delivered at Makers Academy, focused on the production of best p
 - Run bundle install 
 - Run on IRB as follows:
 ```
--r "./lib/bank_account.rb'
+require './lib/bank_account.rb'
 ```
 ```
 account = Account.new 
