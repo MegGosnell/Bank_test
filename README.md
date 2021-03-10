@@ -78,7 +78,6 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-![text] (../desktop/Screenshot 2021-03-10 at 10.18.21.png)
 
 
 
