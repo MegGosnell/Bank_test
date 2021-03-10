@@ -1,7 +1,6 @@
-#Bank Test
+## Bank Test
 
-#User stories
-
+## User stories
 ```
 As a client of the bank
 So that i can keep my money in one singular place
@@ -31,10 +30,30 @@ As someone who frequently deposits and withdraws
 So that i can keep track of my finances
 I would like to see my transactions on a bank statment
 ```
+## Specification
+
+## Requirements
+
+You should be able to interact with your code via IRB.
+Deposits, withdrawal.
+Account statement (date, amount, balance) printing.
+Data can be kept in memory (no database).
 
 
+## Acceptance Criteria 
 
+Given a client makes a deposit of 1000 on 10-01-2012
+And a deposit of 2000 on 13-01-2012
+And a withdrawal of 500 on 14-01-2012
+When she prints her bank statement
+Then she would see
 
+```
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+```
 
 
 
