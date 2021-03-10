@@ -1,5 +1,7 @@
 ## Bank Test
 
+A practice test delivered at Makers Academy, focused on the production of best practice code, obeying the principles of OO Design and TDD.
+
 ## User stories
 ```
 As a client of the bank
