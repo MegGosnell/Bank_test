@@ -2,6 +2,19 @@
 
 A practice test delivered at Makers Academy, focused on the production of best practice code, obeying the principles of OO Design and TDD.
 
+## Project set up
+- Clone the repo 
+- Run bundle install 
+- Run on IRB as follows:
+```
+-r "./lib/bank_account.rb'
+account = Account.new 
+account.deposit(1000)
+account.deposit(2000)
+account.withdraw(500)
+account.bank_statement
+```
+
 ## User stories
 ```
 As a client of the bank
