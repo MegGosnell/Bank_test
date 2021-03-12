@@ -36,7 +36,7 @@ context 'New Account'
     end
 
     describe '#bank_statement' do 
-        it 'should print a bank statement' do 
+        it 'should print a bank statement in chronological order and shown on correct dates' do 
             subject.deposit(1000)
             subject.deposit(2000)
             subject.withdraw(500)
