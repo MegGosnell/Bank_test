@@ -5,5 +5,5 @@ class Statement
         statement = HEADER + printed_statement
         puts statement
         return statement
-     end
+    end
 end 
