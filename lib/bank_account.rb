@@ -1,11 +1,13 @@
+require_relative 'statement'
 class Account
 attr_reader :balance, :time
 DEFAULT_BALANCE = 0
-  HEADER = "Date || Credit || Debit || Balance"
-  def initialize
+  
+  def initialize(statement = Statement)
     @transaction_history = []
     @balance = DEFAULT_BALANCE
     @time = Time.new
+    @statement = statement
   end
   
   def bank_account
@@ -27,11 +29,8 @@ DEFAULT_BALANCE = 0
     @balance
   end
 
-    
   def bank_statement
-    @transaction_history << HEADER
-    printed_statement = @transaction_history.reverse.join("\n")
-    puts printed_statement
-    return printed_statement
+   new_statement = @statement.new
+   new_statement.print_statement(@transaction_history)
   end
 end
