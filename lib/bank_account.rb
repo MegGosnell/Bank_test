@@ -27,6 +27,7 @@ DEFAULT_BALANCE = 0
     @balance
   end
 
+    
   def bank_statement
     @transaction_history << HEADER
     printed_statement = @transaction_history.reverse.join("\n")
