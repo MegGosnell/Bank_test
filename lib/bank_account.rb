@@ -15,14 +15,14 @@ DEFAULT_BALANCE = 0
   end
 
   def deposit(amount)
-    @balance += amount
+    increase_balance(amount)
     fail "This is not a valid number" unless amount.is_a?(Integer) && amount.positive?
     @transaction_history.push("#{@time.strftime("%d/%m/%Y")}  || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
     @balance
   end
 
   def withdraw(amount)
-    @balance -= amount
+    decrease_balance(amount)
     fail "You have insufficent funds" if @balance - amount < 0
     fail "This is not a valid number" unless amount.is_a?(Integer) && amount.positive?
     @transaction_history.push("#{@time.strftime("%d/%m/%Y")} || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
@@ -32,5 +32,15 @@ DEFAULT_BALANCE = 0
   def bank_statement
    new_statement = @statement.new
    new_statement.print_statement(@transaction_history)
+  end
+
+  private 
+
+  def increase_balance(amount)
+    @balance += amount
+  end 
+
+  def decrease_balance(amount)
+    @balance -= amount
   end
 end
